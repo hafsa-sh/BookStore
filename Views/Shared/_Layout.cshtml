@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BookStore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @RenderSection("Styles", required: false)
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/Home/Index">Book Store</a>
+
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/Home/Index">Home</a>
+                    <a class="nav-link" href="/Home/About">About</a>
+                    <a class="nav-link" href="/Home/Contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <div class="container">
+            Name: Hafsa Shahbaz | Roll Number: BSEF24M022
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
